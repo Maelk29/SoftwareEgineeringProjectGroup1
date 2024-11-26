@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:micro="clr-namespace:Microcharts.Maui;assembly=Microcharts.Maui"
+             x:Class="SoftwareGroup1.MainPage"
+             Title="Software Project: Group 1">
+
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+
+            <RowDefinition Height="Auto" />
+
+            <RowDefinition Height="*" />
+
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Picker x:Name="Time" VerticalOptions="Center" HorizontalOptions="Start" Grid.Row="1" Grid.Column="0" Margin="10">
+            <Picker.Items>
+                <x:String>Last Hour</x:String>
+                <x:String>Last Day</x:String>
+                <x:String>Last Week</x:String>
+                <x:String>Last Month</x:String>
+                <x:String>Last Year</x:String>
+                <x:String>All Time</x:String>
+            </Picker.Items>
+        </Picker>
+
+        <Picker x:Name="City" Title="Select Sensor" VerticalOptions="Center" HorizontalOptions="Center" Grid.Row="1" Grid.Column="1">
+            <Picker.Items>
+                <x:String>Eschede MKR</x:String>
+                <x:String>Eschede LHT</x:String>
+                <x:String>Wierden MKR</x:String>
+                <x:String>Wierden LHT</x:String>
+                <x:String>Gronau LHT</x:String>
+                <x:String>Group1 MKR</x:String>
+            </Picker.Items>
+        </Picker>
+
+        <Grid Grid.Row="2"
+              Grid.Column="0"
+              Grid.ColumnSpan="3"
+              Margin="10"
+              Background="SeaGreen">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <!--Here you can insert the graphs where you want-->
+
+
+
+
+        </Grid>
+        
+
+    </Grid>
+
+</ContentPage>
