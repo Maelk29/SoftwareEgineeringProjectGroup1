@@ -22,7 +22,8 @@
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
 
-        <Picker x:Name="Time" VerticalOptions="Center" HorizontalOptions="Start" Grid.Row="1" Grid.Column="0" Margin="10">
+        <!--Dropdown menu for the time range-->
+        <Picker x:Name="Time" VerticalOptions="Center" HorizontalOptions="Center" Grid.Row="1" Grid.Column="0" Margin="10">
             <Picker.Items>
                 <x:String>Last Hour</x:String>
                 <x:String>Last Day</x:String>
@@ -33,7 +34,8 @@
             </Picker.Items>
         </Picker>
 
-        <Picker x:Name="City" Title="Select Sensor" VerticalOptions="Center" HorizontalOptions="Center" Grid.Row="1" Grid.Column="1">
+        <!--Dropdown menu for the sensors-->
+        <Picker x:Name="City" Title="Select Sensor" VerticalOptions="Center" HorizontalOptions="Center" Grid.Row="1" Grid.Column="1" SelectedIndexChanged="OnCitySelected">
             <Picker.Items>
                 <x:String>Eschede MKR</x:String>
                 <x:String>Eschede LHT</x:String>
@@ -44,6 +46,11 @@
             </Picker.Items>
         </Picker>
 
+        <!--:abe; to display geographical locations of the sensors-->
+        <Label x:Name="SensorInfo" VerticalOptions="Center"  HorizontalOptions="Start" Grid.Row="1" Grid.Column="2"
+            Text="Select a sensor to see geographical details." />
+
+        <!--Grid for displaying the charts-->
         <Grid Grid.Row="2"
               Grid.Column="0"
               Grid.ColumnSpan="3"
