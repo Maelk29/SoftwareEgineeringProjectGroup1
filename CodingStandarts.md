@@ -9,3 +9,5 @@
 9) Use parentheses to make clauses in an expression apparent
 10) Write only one statement per line.
 11) Write only one declaration per line
+12) Follow a consistent formatting style
+13) Reuse code whenever possible to avoid repetition
